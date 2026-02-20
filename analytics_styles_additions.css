@@ -1,0 +1,203 @@
+/* =============================================================
+   Analytics Section — additions for css/styles.css
+   Append these rules to the bottom of css/styles.css
+   ============================================================= */
+
+/* ---------- Analytics section wrapper ---------- */
+.analytics-section {
+  background: linear-gradient(160deg, #0f172a 0%, #1e3a5f 60%, #0f172a 100%);
+}
+
+/* Feature pills row */
+.analytics-pills-row {
+  display: flex; flex-wrap: wrap; gap: .6rem;
+  justify-content: center; margin-bottom: 3rem;
+}
+.analytics-pill {
+  display: inline-flex; align-items: center; gap: .45rem;
+  background: rgba(26,115,232,.18);
+  color: #93c5fd;
+  border: 1px solid rgba(26,115,232,.3);
+  font-size: .78rem; font-weight: 600;
+  letter-spacing: .04em;
+  padding: .35rem .9rem; border-radius: 2rem;
+  transition: background .2s, color .2s;
+}
+.analytics-pill:hover { background: rgba(26,115,232,.35); color: #fff; }
+
+/* Two-column grid */
+.analytics-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5rem;
+  align-items: start;
+}
+@media (max-width: 900px) {
+  .analytics-grid { grid-template-columns: 1fr; }
+}
+
+/* ---------- Launch card (left) ---------- */
+.analytics-launch-card {
+  background: rgba(255,255,255,.04);
+  border: 1px solid rgba(255,255,255,.1);
+  border-radius: 1.25rem;
+  padding: 2.25rem;
+  backdrop-filter: blur(8px);
+}
+
+.alc-icon-wrap {
+  width: 3.5rem; height: 3.5rem;
+  background: linear-gradient(135deg, #1A73E8, #34A853);
+  border-radius: .875rem;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.5rem; color: #fff;
+  margin-bottom: 1.25rem;
+}
+
+.alc-title {
+  font-family: 'Syne', sans-serif;
+  font-size: 1.35rem; font-weight: 800;
+  color: #fff; margin-bottom: .75rem;
+}
+
+.alc-desc {
+  color: rgba(255,255,255,.6);
+  font-size: .9rem; line-height: 1.65;
+  margin-bottom: 1.5rem;
+}
+
+/* Steps list */
+.alc-steps {
+  list-style: none; padding: 0; margin: 0 0 1.75rem;
+  display: flex; flex-direction: column; gap: .75rem;
+}
+.alc-steps li {
+  display: flex; align-items: flex-start; gap: .75rem;
+  color: rgba(255,255,255,.7); font-size: .9rem;
+}
+.alc-step-num {
+  flex-shrink: 0;
+  width: 1.6rem; height: 1.6rem;
+  background: #1A73E8; color: #fff;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: .75rem; font-weight: 700;
+  margin-top: .05rem;
+}
+
+.alc-btn {
+  display: inline-flex; align-items: center;
+  background: linear-gradient(135deg, #1A73E8, #34A853);
+  color: #fff !important;
+  padding: .85rem 2rem; border-radius: .75rem;
+  font-weight: 700; font-size: 1rem;
+  transition: opacity .2s, transform .2s;
+  text-decoration: none;
+  width: 100%; justify-content: center; margin-bottom: 1rem;
+}
+.alc-btn:hover { opacity: .9; transform: translateY(-2px); }
+
+.alc-demo-link {
+  text-align: center;
+  color: rgba(255,255,255,.45);
+  font-size: .82rem; margin-bottom: 1.25rem;
+}
+
+/* Format pills */
+.alc-formats {
+  display: flex; flex-wrap: wrap; gap: .5rem; align-items: center; justify-content: center;
+}
+.alc-format-pill {
+  background: rgba(255,255,255,.07);
+  color: #93c5fd;
+  border: 1px solid rgba(255,255,255,.12);
+  font-size: .73rem; font-weight: 600;
+  padding: .25rem .65rem; border-radius: .375rem;
+}
+.alc-format-text { color: rgba(255,255,255,.3); font-size: .75rem; }
+
+/* ---------- Preview card (right) ---------- */
+.analytics-preview-card {
+  border-radius: 1.25rem;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,.12);
+  box-shadow: 0 25px 60px rgba(0,0,0,.4);
+}
+
+.apc-header {
+  background: #1e293b;
+  padding: .65rem 1rem;
+  display: flex; align-items: center; gap: .5rem;
+}
+.apc-dot {
+  width: .7rem; height: .7rem;
+  border-radius: 50%; flex-shrink: 0;
+}
+.apc-url {
+  font-size: .75rem; color: #64748b;
+  background: #0f172a; border-radius: .375rem;
+  padding: .2rem .75rem; flex: 1; text-align: center;
+  font-family: monospace;
+}
+
+.apc-body { background: #0f1b2d; padding: 1.5rem; }
+
+/* Animated dashboard mockup */
+.mock-kpi-row { display: flex; gap: .75rem; margin-bottom: 1rem; flex-wrap: wrap; }
+.mock-kpi {
+  flex: 1; min-width: 70px;
+  border-radius: .6rem; padding: .6rem .75rem;
+  text-align: center;
+}
+.mock-kpi.blue  { background: rgba(26,115,232,.15); }
+.mock-kpi.green { background: rgba(52,168,83,.15);  }
+.mock-kpi.amber { background: rgba(251,188,5,.12);  }
+.mock-kpi.red   { background: rgba(234,67,53,.12);  }
+.mk-label { font-size: .62rem; text-transform: uppercase; letter-spacing: .06em; color: #64748b; }
+.mk-val   { font-family: 'Syne', sans-serif; font-size: 1.1rem; font-weight: 800; margin-top: .15rem; }
+.mock-kpi.blue  .mk-val { color: #60a5fa; }
+.mock-kpi.green .mk-val { color: #4ade80; }
+.mock-kpi.amber .mk-val { color: #fbbf24; }
+.mock-kpi.red   .mk-val { color: #f87171; }
+
+.mock-chart-row { display: flex; gap: .75rem; margin-bottom: 1rem; }
+.mock-chart { flex: 1; background: rgba(255,255,255,.04); border-radius: .6rem; padding: .75rem; }
+.mock-chart-label { font-size: .65rem; color: #64748b; margin-bottom: .5rem; }
+
+.mock-bars { display: flex; align-items: flex-end; gap: .3rem; height: 70px; }
+.mb { flex: 1; border-radius: .2rem .2rem 0 0; opacity: .85; animation: barGrow 1.2s ease both; }
+
+@keyframes barGrow {
+  from { transform: scaleY(0); transform-origin: bottom; }
+  to   { transform: scaleY(1); transform-origin: bottom; }
+}
+
+.mock-pie { flex: 0 0 100px; background: rgba(255,255,255,.04); border-radius: .6rem; padding: .75rem; }
+.mock-donut { width: 70px; height: 70px; margin: 0 auto; display: block; }
+
+.mock-insight {
+  background: rgba(26,115,232,.1);
+  border-left: 3px solid #1A73E8;
+  border-radius: 0 .5rem .5rem 0;
+  color: #93c5fd; font-size: .75rem; line-height: 1.5;
+  padding: .6rem .85rem; margin-bottom: 1rem;
+}
+
+.apc-open-btn {
+  display: flex; align-items: center; justify-content: center;
+  width: 100%;
+  background: rgba(26,115,232,.2);
+  border: 1px solid rgba(26,115,232,.4);
+  color: #60a5fa !important; text-decoration: none;
+  padding: .65rem; border-radius: .6rem;
+  font-size: .88rem; font-weight: 600;
+  transition: background .2s, color .2s;
+}
+.apc-open-btn:hover { background: #1A73E8; color: #fff !important; }
+
+/* ---------- Add "Analytics" to the nav ---------- */
+/* In index.html, add this nav link alongside the others:
+   <a href="#analytics" class="nav-link hover:text-primary transition-colors">
+     <i class="fas fa-chart-pie mr-2"></i>Analytics
+   </a>
+*/

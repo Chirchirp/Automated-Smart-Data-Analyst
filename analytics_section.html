@@ -1,0 +1,161 @@
+<!-- =====================================================================
+  SOKODATA — Live Analytics Section
+  Paste this ENTIRE block into index.html, just before the closing </main> tag
+  (i.e. after the #testimonials section).
+  
+  Then update the two STREAMLIT_APP_URL values with your real Streamlit URL.
+  Example: https://sokodata-explorer.streamlit.app
+======================================================================= -->
+
+<!-- ===== LIVE ANALYTICS SECTION ===== -->
+<section id="analytics" class="py-20 analytics-section" aria-labelledby="analytics-heading">
+  <div class="container mx-auto px-4">
+
+    <!-- Section header -->
+    <div class="section-header" data-aos="fade-up">
+      <span class="section-tag">Live Tool</span>
+      <h2 id="analytics-heading" class="section-title">Smart Data Explorer</h2>
+      <p class="section-sub">
+        Upload any CSV or Excel file and get instant, intelligent analytics —
+        descriptive stats, missing-value checks, charts, correlations and plain-English insights.
+        <strong>No API key. No server. 100% free.</strong>
+      </p>
+    </div>
+
+    <!-- Feature pills -->
+    <div class="analytics-pills-row" data-aos="fade-up" data-aos-delay="80">
+      <span class="analytics-pill"><i class="fas fa-table" aria-hidden="true"></i> Data Preview</span>
+      <span class="analytics-pill"><i class="fas fa-check-circle" aria-hidden="true"></i> Null &amp; Duplicate Check</span>
+      <span class="analytics-pill"><i class="fas fa-chart-bar" aria-hidden="true"></i> Bar &amp; Pie Charts</span>
+      <span class="analytics-pill"><i class="fas fa-chart-line" aria-hidden="true"></i> Time-Series Trends</span>
+      <span class="analytics-pill"><i class="fas fa-project-diagram" aria-hidden="true"></i> Correlation Matrix</span>
+      <span class="analytics-pill"><i class="fas fa-lightbulb" aria-hidden="true"></i> Auto Insights</span>
+      <span class="analytics-pill"><i class="fas fa-download" aria-hidden="true"></i> Download Reports</span>
+    </div>
+
+    <!-- Two-column layout: left = mini uploader bridge, right = app iframe preview -->
+    <div class="analytics-grid" data-aos="fade-up" data-aos-delay="120">
+
+      <!-- LEFT: Quick-launch card -->
+      <div class="analytics-launch-card">
+        <div class="alc-icon-wrap" aria-hidden="true">
+          <i class="fas fa-rocket"></i>
+        </div>
+        <h3 class="alc-title">Ready to analyse your data?</h3>
+        <p class="alc-desc">
+          Our Smart Data Explorer runs on Streamlit — a free, open platform.
+          Click the button below to open the full app in a new tab.
+          Your data is processed entirely in the cloud session — nothing is stored.
+        </p>
+
+        <!-- Step guide -->
+        <ol class="alc-steps">
+          <li>
+            <span class="alc-step-num">1</span>
+            <span>Click <strong>Open Data Explorer</strong> below.</span>
+          </li>
+          <li>
+            <span class="alc-step-num">2</span>
+            <span>Upload a <strong>CSV or Excel</strong> file (or load the demo dataset).</span>
+          </li>
+          <li>
+            <span class="alc-step-num">3</span>
+            <span>Explore <strong>auto-generated charts, stats &amp; insights</strong>.</span>
+          </li>
+          <li>
+            <span class="alc-step-num">4</span>
+            <span>Download your <strong>HTML or CSV report</strong>.</span>
+          </li>
+        </ol>
+
+        <a id="analyticsLaunchBtn"
+           href="https://YOUR-APP-NAME.streamlit.app"
+           target="_blank"
+           rel="noopener noreferrer"
+           class="alc-btn"
+           aria-label="Open SokoData Smart Data Explorer in Streamlit">
+          <i class="fas fa-external-link-alt mr-2" aria-hidden="true"></i>
+          Open Data Explorer
+        </a>
+
+        <!-- Demo CSV download link -->
+        <p class="alc-demo-link">
+          No data handy?
+          <a href="assets/data/demo.csv" download class="text-primary underline hover:text-blue-700 transition">
+            Download our demo CSV
+          </a>
+          and try it in the app.
+        </p>
+
+        <!-- Supported formats -->
+        <div class="alc-formats">
+          <span class="alc-format-pill"><i class="fas fa-file-csv mr-1" aria-hidden="true"></i>CSV</span>
+          <span class="alc-format-pill"><i class="fas fa-file-excel mr-1" aria-hidden="true"></i>XLS</span>
+          <span class="alc-format-pill"><i class="fas fa-file-excel mr-1" aria-hidden="true"></i>XLSX</span>
+          <span class="alc-format-text">Up to 200 MB</span>
+        </div>
+      </div>
+
+      <!-- RIGHT: App preview / screenshot -->
+      <div class="analytics-preview-card">
+        <div class="apc-header">
+          <span class="apc-dot" style="background:#EA4335;" aria-hidden="true"></span>
+          <span class="apc-dot" style="background:#FBBC05;" aria-hidden="true"></span>
+          <span class="apc-dot" style="background:#34A853;" aria-hidden="true"></span>
+          <span class="apc-url" aria-label="Streamlit app URL">SokoData — Smart Data Explorer</span>
+        </div>
+
+        <!-- Screenshot / placeholder — replace src with a real screenshot of your app -->
+        <div class="apc-body" id="analyticsPreviewBody">
+          <div class="apc-placeholder" aria-label="App preview">
+            <!-- Animated mockup of the dashboard -->
+            <div class="mock-kpi-row" aria-hidden="true">
+              <div class="mock-kpi blue">  <div class="mk-label">Rows</div>    <div class="mk-val">15,000</div></div>
+              <div class="mock-kpi green"> <div class="mk-label">Cols</div>     <div class="mk-val">12</div></div>
+              <div class="mock-kpi amber"> <div class="mk-label">Complete</div> <div class="mk-val">97.3%</div></div>
+              <div class="mock-kpi red">   <div class="mk-label">Dups</div>     <div class="mk-val">42</div></div>
+            </div>
+            <div class="mock-chart-row" aria-hidden="true">
+              <div class="mock-chart">
+                <div class="mock-chart-label">Monthly Spend Distribution</div>
+                <div class="mock-bars">
+                  <div class="mb" style="height:40%;background:#1A73E8;"></div>
+                  <div class="mb" style="height:70%;background:#1A73E8;"></div>
+                  <div class="mb" style="height:55%;background:#1A73E8;"></div>
+                  <div class="mb" style="height:90%;background:#34A853;"></div>
+                  <div class="mb" style="height:65%;background:#34A853;"></div>
+                  <div class="mb" style="height:80%;background:#1A73E8;"></div>
+                  <div class="mb" style="height:45%;background:#1A73E8;"></div>
+                  <div class="mb" style="height:60%;background:#FBBC05;"></div>
+                </div>
+              </div>
+              <div class="mock-pie" aria-hidden="true">
+                <div class="mock-chart-label">Segment Breakdown</div>
+                <svg viewBox="0 0 100 100" class="mock-donut">
+                  <circle cx="50" cy="50" r="35" fill="none" stroke="#e2e8f0" stroke-width="16"/>
+                  <circle cx="50" cy="50" r="35" fill="none" stroke="#1A73E8" stroke-width="16"
+                          stroke-dasharray="66 154" stroke-dashoffset="0" transform="rotate(-90 50 50)"/>
+                  <circle cx="50" cy="50" r="35" fill="none" stroke="#34A853" stroke-width="16"
+                          stroke-dasharray="44 176" stroke-dashoffset="-66" transform="rotate(-90 50 50)"/>
+                  <circle cx="50" cy="50" r="35" fill="none" stroke="#FBBC05" stroke-width="16"
+                          stroke-dasharray="22 198" stroke-dashoffset="-110" transform="rotate(-90 50 50)"/>
+                </svg>
+              </div>
+            </div>
+            <div class="mock-insight" aria-hidden="true">
+              💡 <strong>Auto Insight:</strong> Column <em>monthly_spend_ksh</em> is right-skewed (skew=1.82). Consider log transform.
+            </div>
+            <a href="https://YOUR-APP-NAME.streamlit.app"
+               target="_blank" rel="noopener noreferrer"
+               class="apc-open-btn"
+               aria-label="Open the Smart Data Explorer app">
+              <i class="fas fa-play-circle mr-2" aria-hidden="true"></i>
+              Launch Full App
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /analytics-grid -->
+  </div>
+</section>
